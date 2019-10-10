@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h5 style="padding: 10px;" class="text-danger text-center">Request Blood</h5>
+            <div style="padding-top: 10px;" class="tadaa">
+                <form style="padding: 18px;" class="border border-danger rounded">
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Name:</label>
+                        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Full Name"  [(ngModel)]="userEmail" name="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Phone Number:</label>
+                        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Mobile Number">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Blood Type:</label>
+                        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Eg: AB+">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Location:</label>
+                        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Manually">
+                        <h5 class="text-danger text-center"><br>OR<br></h5>
+                        <button type="submit" class="btn btn-danger btn-block">Auto Detect</button>
+                    </div>
+                    <button type="submit" class="btn btn-danger btn-block">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
