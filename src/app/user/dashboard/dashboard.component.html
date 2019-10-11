@@ -1,16 +1,16 @@
-<div class="container">
-    <div class="row">
+<div *ngIf="itemsPRef" class="container">
+    <div *ngFor="let item of itemsPRef" class="row">
         <div class="col-12">
             <h5 style="padding: 15px;" class="text-danger">Pending Requests</h5>
             <div class="card border-danger" style="width: 20rem;">
                 <div class="card-body">
-                    <h5 class="card-title">Recipient Name</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Blood Type</h6>
-                    <p class="card-text">Recepient Address</p>
+                    <h5 class="card-title">{{item.Pname}}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Blood Type: {{item.RbType}}</h6>
+                    <p class="card-text">{{item.pincode}}</p>
                     <div class="row">
                         <div class="col-6">
                             <div class="text-center">
-                                <a href="#" class="text-success">Accept </a>
+                                <a (click)="shiftTask()" class="text-success">Accept </a>
                             </div>
                         </div>
                         <div class="col-6">
@@ -29,13 +29,13 @@
     <div class="row">
         <div class="col-12">
             <h5 style="padding-top: 35px;" class="text-danger">Completed Tasks</h5>
-            <div *ngFor="let item of itemsList | async" class="card">
+            <div *ngFor="let item of itemsRef" class="card">
                 <div class="card-header">
-                  Name
+                  {{item[x].Pname}}
                 </div>
                 <div class="card-body">
                   <blockquote class="blockquote mb-0">
-                    <p>Address.</p>
+                    <p>{{item.Paddress}}.</p>
                     <footer class="blockquote-footer">Date <cite title="Source Title">19/2/2019</cite></footer>
                   </blockquote>
                 </div>

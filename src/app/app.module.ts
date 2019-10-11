@@ -6,6 +6,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { FormsModule } from '@angular/forms';
+import {AngularGooglePlaceModule} from 'angular-google-place';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -33,7 +34,8 @@ import { LandingComponent } from './landing/landing.component';
     AngularFireDatabaseModule,
     AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebase),
-    FormsModule
+    FormsModule,
+    AngularGooglePlaceModule
   ],
   providers: [],
   bootstrap: [AppComponent]

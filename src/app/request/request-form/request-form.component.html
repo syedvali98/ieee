@@ -6,23 +6,25 @@
                 <form style="padding: 18px;" class="border border-danger rounded">
                     <div class="form-group">
                         <label for="exampleInputPassword1">Name:</label>
-                        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Full Name"  [(ngModel)]="userEmail" name="email">
+                        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Full Name"
+                            [(ngModel)]="Pname" name="name">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Phone Number:</label>
-                        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Mobile Number">
+                        <input type="text" [(ngModel)]="Pnumber" name="number" class="form-control" id="exampleInputPassword1" placeholder="Mobile Number">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Blood Type:</label>
-                        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Eg: AB+">
+                        <input type="text" [(ngModel)]="ubtype" name="btype" class="form-control" id="exampleInputPassword1" placeholder="Eg: AB+">
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Location:</label>
-                        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Manually">
+                        <label for="exampleInputPassword1">Pincode:</label>
+                        <input type="text" [(ngModel)]="pincode" name="pincode" class="form-control" id="exampleInputPassword1" placeholder="Eg: 500053">
+
                         <h5 class="text-danger text-center"><br>OR<br></h5>
-                        <button type="submit" class="btn btn-danger btn-block">Auto Detect</button>
+                        <button type="submit" (click)="getCurrentLocation()" class="btn btn-danger btn-block">Auto Detect</button>
                     </div>
-                    <button type="submit" class="btn btn-danger btn-block">Submit</button>
+                    <button type="submit" (click)="onSubmit()" class="btn btn-danger btn-block">Submit</button>
                 </form>
             </div>
         </div>
