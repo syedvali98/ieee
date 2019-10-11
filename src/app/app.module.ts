@@ -17,6 +17,7 @@ import { DashboardComponent } from './user/dashboard/dashboard.component';
 import { RequestFormComponent } from './request/request-form/request-form.component';
 import { NearbyBanksComponent } from './request/nearby-banks/nearby-banks.component';
 import { LandingComponent } from './landing/landing.component';
+import { PendingComponent } from './request/pending/pending.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { LandingComponent } from './landing/landing.component';
     DashboardComponent,
     RequestFormComponent,
     NearbyBanksComponent,
-    LandingComponent
+    LandingComponent,
+    PendingComponent
   ],
   imports: [
     BrowserModule,
